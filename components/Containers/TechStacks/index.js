@@ -1,3 +1,5 @@
+import TechStacks from "@/components/TechStacks"
+
 const stacks = [
   {
     name: 'Nuxt(vue)',
@@ -35,13 +37,11 @@ const stacks = [
 ]
 
 
-const TechStacks = (props) => {
+const TechStacksContainer = (props) => {
   return (
-    <>
-
-    </>
+    <TechStacks stacks={stacks} />
   )
 }
 
 
-export default TechStacks
+export default TechStacksContainer

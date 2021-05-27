@@ -1,0 +1,66 @@
+$card_border_radius: 25px;
+$card_padding: 50px;
+
+
+.tech_stacks {
+  padding: $page_content_padding 0;
+  
+  background-color: $color_grey9;
+
+  .cards_wrapper {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: stretch;
+
+    .profile_card {
+      flex-basis: calc(50% - 30px);
+    }
+    .stack_cards {
+      flex-basis: calc(50% - 30px);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+
+      .title_card {
+        position: relative;
+        
+        padding: $card_padding;
+
+        background-color: #191f28;
+        border-radius: $card_border_radius;
+
+        overflow: hidden;
+        
+        .title {
+          font-size: 32px;
+          font-weight: bold;
+
+          color: rgba($color: #ffffff, $alpha: 0.6);
+
+          word-break: keep-all;
+
+          .highlight {
+            color: #ffffff;
+          }
+        }
+        .text_javascript {
+          position: absolute;
+
+          display: block;
+          
+          right: $card_padding / 3;
+          bottom: $card_padding / 3;
+          
+          font-size: 128px;
+          line-height: 1;
+          letter-spacing: -5px;
+
+          color: #f6df34;
+        }
+      }
+    }
+  }
+}
