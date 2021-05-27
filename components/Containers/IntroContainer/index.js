@@ -23,9 +23,6 @@ const IntroContainer = () => {
       window.removeEventListener('scroll', scrollHandler)
     }
   }, [])
-  useEffect(() => {
-    console.log(scroll)
-  }, [scroll])
 
 
   return (
