@@ -30,7 +30,7 @@ const IntroContainer = () => {
       refBackgroundPlaceholder={backgroundPlaceholder}
       backgroundOpacity={(1 - scroll.percentage)}
       backgroundHeight="200vh"
-      isFixed={true}
+      isFixed={scroll.percentage <= 1}
     ></Intro>
   )
 }
