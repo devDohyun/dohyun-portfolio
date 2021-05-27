@@ -28,7 +28,7 @@ const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceh
         <div className={style.background} style={{ opacity: backgroundOpacity }}>
           <div className={style.background_text}>
             <div className={style.title}>저의 작은 경험이 귀사에 도움이 되길 바랍니다.</div>
-            <div className={style.subtitle}>사용자에게 좋은 서비스를 만들기 위해 노력하고있습니다.</div>
+            <div className={style.subtitle}>사용자에게 좋은 서비스를 만들기 위해 노력하겠습니다.</div>
           </div>
         </div>
       </div>
