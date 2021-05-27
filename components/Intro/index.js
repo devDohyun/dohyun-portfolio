@@ -1,10 +1,26 @@
+import { useMemo } from 'react'
+import classnames from 'classnames/bind'
 import style from './index.module.scss'
 
 
-const Intro = ({ backgroundHeight = '100vh', refBackgroundPlaceholder, backgroundOpacity, isFixed  = false }) => {
+const cx = classnames.bind(style)
+
+const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceholder, isIntro  = false }) => {
+  const { isActivated, isExited, backgroundOpacity } = useMemo(() => {
+    if (isIntro !== true) return {}
+
+
+    return {
+      isActivated: percentage < 1,
+      isExited: percentage === 1,
+      backgroundOpacity: 1 - percentage
+    }
+  }, [percentage])
+  
+  
   return (
     <div className={style.intro}>
-      <div className={style.content} style={{ position: isFixed ? 'fixed' : '' }}>
+      <div className={cx(style.content, { active: isActivated, exited: isExited })}>
         <div className={style.content_text}>
           <div className={style.title}>3년차 Front-End 개발자 안도현</div>
           <div className={style.subtitle}>계속 내려서 더-보기</div>

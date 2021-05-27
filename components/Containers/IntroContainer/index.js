@@ -28,9 +28,9 @@ const IntroContainer = () => {
   return (
     <Intro
       refBackgroundPlaceholder={backgroundPlaceholder}
-      backgroundOpacity={(1 - scroll.percentage)}
+      percentage={scroll.percentage}
       backgroundHeight="200vh"
-      isFixed={scroll.percentage <= 1}
+      isIntro={true}
     ></Intro>
   )
 }
