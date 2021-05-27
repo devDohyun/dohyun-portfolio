@@ -1,10 +1,10 @@
 import style from './CodeItem.module.scss'
 
 
-const CodeItem = (props) => {
+const CodeItem = ({ text }) => {
   return (
     <div className={style.code_item}>
-      {props.text}
+      {text}
     </div>
   )
 }

@@ -14,4 +14,8 @@
   font-size: 14px;
 
   white-space: pre;
+
+  @media (max-width: $bp_sm) {
+    font-size: 12px;
+  }
 }

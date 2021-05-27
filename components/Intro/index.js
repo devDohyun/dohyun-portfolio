@@ -4,7 +4,6 @@ import style from './index.module.scss'
 const Intro = (props) => {
   
   
-  
   return (
     <div className={style.intro}>
       <div>
