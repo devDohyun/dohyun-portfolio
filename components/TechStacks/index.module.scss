@@ -127,6 +127,10 @@ $card_padding_y: 75px;
 
       .item_wrapper {
         margin-top: 50px;
+
+        background-color: #ffffff;
+
+        border-radius: $card_border_radius;
       }
     }
   }
