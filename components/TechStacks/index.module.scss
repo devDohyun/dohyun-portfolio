@@ -3,6 +3,14 @@ $card_margin_y: 30px;
 $card_padding_x: 50px;
 $card_padding_y: 75px;
 
+@mixin card_title {
+  font-size: 32px;
+  font-weight: bolder;
+  word-break: keep-all;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
 
 .tech_stacks {
   padding: $page_content_padding 0;
@@ -35,15 +43,10 @@ $card_padding_y: 75px;
 
         position: relative;
         
-        font-size: 32px;
-        font-weight: bold;
-
+        @include card_title;
+        
         color: $color_grey5;
-
-        word-break: keep-all;
-        letter-spacing: 0;
-        line-height: 1.6;
-
+        
         .highlight {
           color: #ffffff;
         }
@@ -77,8 +80,7 @@ $card_padding_y: 75px;
       border-radius: $card_border_radius;
 
       .title {
-        font-size: 32px;
-        font-weight: bold;
+        @include card_title;
 
         color: $color_grey5;
 
