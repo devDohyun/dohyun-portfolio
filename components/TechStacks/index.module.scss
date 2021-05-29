@@ -27,6 +27,10 @@ $card_padding_y: 75px;
     & > * {
       flex-basis: calc(50% - #{$card_margin_y / 2});
       margin-bottom: $card_margin_y;
+
+      @media (max-width: $bp_sm) {
+        flex-basis: 100%;
+      }
     }
     .title_card {
       position: relative;
