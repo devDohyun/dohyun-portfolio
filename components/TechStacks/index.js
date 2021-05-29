@@ -32,7 +32,7 @@ const TechStacks = ({ stacks = [], workspaces = [] }) => {
           <div className={style.workspace_card}>
             <div className={style.title}><span className={style.highlight}>지나온 길</span>을 소개합니다.</div>
             <div className={style.item_wrapper}>
-              {workspaces.map((item) => <WorkspaceItem name={item.name} period={item.period} as={item.as} />)}
+              {workspaces.map((item) => <WorkspaceItem name={item.name} period={item.period} positoin={item.positoin} />)}
             </div>
           </div>
         </div>
