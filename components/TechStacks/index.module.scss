@@ -1,5 +1,7 @@
 $card_border_radius: 25px;
-$card_padding: 50px;
+$card_margin_y: 30px;
+$card_padding_x: 50px;
+$card_padding_y: 75px;
 
 
 .tech_stacks {
@@ -10,56 +12,86 @@ $card_padding: 50px;
   .cards_wrapper {
     display: flex;
 
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
 
-    .profile_card {
-      flex-basis: calc(50% - 30px);
+    & > * {
+      flex-basis: calc(50% - #{$card_margin_y / 2});
+      margin-bottom: $card_margin_y;
     }
-    .stack_cards {
-      flex-basis: calc(50% - 30px);
+    .title_card {
+      position: relative;
+      
+      padding: $card_padding_y $card_padding_x;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: stretch;
+      background-color: #191f28;
+      border-radius: $card_border_radius;
 
-      .title_card {
+      overflow: hidden;
+      
+      .title {
+        z-index: 1;
+
         position: relative;
         
-        padding: $card_padding;
+        font-size: 32px;
+        font-weight: bold;
 
-        background-color: #191f28;
-        border-radius: $card_border_radius;
+        color: $color_grey5;
 
-        overflow: hidden;
+        word-break: keep-all;
+
+        .highlight {
+          color: #ffffff;
+        }
+      }
+      .text_javascript {
+        z-index: 0;
         
-        .title {
-          font-size: 32px;
-          font-weight: bold;
+        position: absolute;
 
-          color: rgba($color: #ffffff, $alpha: 0.6);
+        display: block;
+        
+        right: $card_padding_x / 3;
+        bottom: $card_padding_y / 3;
+        
+        font-size: 96px;
+        line-height: 1;
+        letter-spacing: -5px;
 
-          word-break: keep-all;
+        color: #f6df34;
 
-          .highlight {
-            color: #ffffff;
-          }
+        @media (max-width: $bp_sm) {
+          font-size: 64px;
         }
-        .text_javascript {
-          position: absolute;
+      }
+    }
+    .stack_card {
+      padding: $card_padding_x $card_padding_y;
+      
+      background-color: #ffffff;
 
-          display: block;
-          
-          right: $card_padding / 3;
-          bottom: $card_padding / 3;
-          
-          font-size: 128px;
-          line-height: 1;
-          letter-spacing: -5px;
+      border-radius: $card_border_radius;
 
-          color: #f6df34;
+      .title {
+        font-size: 32px;
+        font-weight: bold;
+
+        color: $color_grey5;
+
+        word-break: keep-all;
+
+        .highlight {
+          color: #000000;
         }
+      }
+
+      .main_wrapper {
+        margin-top: 50px;
+      }
+      .others_wrapper {
+        margin-top: 25px;
       }
     }
   }
