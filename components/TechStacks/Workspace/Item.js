@@ -1,4 +1,4 @@
-import style from './index.module.scss'
+import style from './Item.module.scss'
 
 
 const WorkspaceItem = ({ name, period, position }) => {
