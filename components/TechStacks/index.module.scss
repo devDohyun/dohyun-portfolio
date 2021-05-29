@@ -73,6 +73,10 @@ $card_padding_y: 75px;
       }
     }
     .stack_card {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      
       padding: $card_padding_x $card_padding_y;
       
       background-color: #ffffff;

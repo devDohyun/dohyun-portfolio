@@ -1,5 +1,7 @@
 .main_item {
-    margin-top: 25px;
+    &:not(:last-of-type) {
+        margin-bottom: 25px;
+    }
 
     .name {
         font-size: 16px;
