@@ -1,0 +1,24 @@
+.progress_linear {
+    height: 5px;
+    
+    .wrapper {
+        position: relative;
+        
+        height: 100%;
+        
+        background-color: $color_grey7;
+
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        .value {
+            position: absolute;
+            left: 0;
+            
+            height: 100%;
+            
+            background-color: $color_apple_blue;
+        }
+    }
+}

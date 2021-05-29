@@ -1,3 +1,4 @@
+import ProgressLinear from '@/components/Progress/Linear'
 import { useMemo } from 'react'
 import style from './Main.module.scss'
 
@@ -23,6 +24,9 @@ const MainItem = ({ name, isLearning, level }) => {
             <div className={style.text}>
                 <div className={style.name}>{name}</div>
                 <div className={style.desc}>{desc}</div>
+                <div className={style.level}>
+                    <ProgressLinear value={level} />
+                </div>
             </div>
         </div>
     )
