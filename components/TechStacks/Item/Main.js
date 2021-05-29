@@ -7,10 +7,12 @@ const MainItem = ({ name, isLearning, level }) => {
         let result = ''
         
         
-        if (level >= 70) result = ''
-        else if (level >= 50) result = ''
-        else if (level >= 30) result = ''
+        if (level >= 70) result = '다수의 서비스 경험 보유'
+        else if (level >= 30) result = '서비스 경험 보유'
+        else result = '사용 경험 보유'
 
+
+        if (isLearning) result += ', 학습중'
 
         return result
     }, [level, isLearning])

@@ -2,19 +2,19 @@ import TechStacks from "@/components/TechStacks"
 
 const stacks = [
   {
-    name: 'Nuxt(vue)',
+    name: 'Nuxt',
     level: 90,
     isLearning: false,
     isMain: true
   },
   {
-    name: 'Next(react)',
+    name: 'Next',
     level: 50,
     isLearning: true,
     isMain: true
   },
   {
-    name: 'express(RESTFUL API)',
+    name: 'express',
     level: 40,
     isLearning: false,
     isMain: true

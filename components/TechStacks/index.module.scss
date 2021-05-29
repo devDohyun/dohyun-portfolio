@@ -41,6 +41,8 @@ $card_padding_y: 75px;
         color: $color_grey5;
 
         word-break: keep-all;
+        letter-spacing: 0;
+        line-height: 1.6;
 
         .highlight {
           color: #ffffff;
