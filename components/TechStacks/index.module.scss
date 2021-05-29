@@ -88,8 +88,6 @@ $card_padding_y: 75px;
 
         color: $color_grey5;
 
-        word-break: keep-all;
-
         .highlight {
           color: #000000;
         }
@@ -100,6 +98,31 @@ $card_padding_y: 75px;
       }
       .others_wrapper {
         margin-top: 50px;
+      }
+    }
+    .workspace_card {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      
+      padding: $card_padding_x $card_padding_y;
+      
+      background-color: $color_apple_blue;
+
+      border-radius: $card_border_radius;
+      
+      .title {
+        @include card_title;
+
+        color: rgba($color: #ffffff, $alpha: 0.6);
+
+        .highlight {
+          color: #ffffff;
+        }
+      }
+
+      .item_wrapper {
+        
       }
     }
   }

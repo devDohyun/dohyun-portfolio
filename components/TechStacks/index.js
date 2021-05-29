@@ -2,9 +2,10 @@ import ImageCard from '@/components/Cards/Image'
 import style from './index.module.scss'
 import StackItem from './Item'
 import StackMainItem from './Item/Main'
+import WorkspaceItem from './Workspace/Item'
 
 
-const TechStacks = ({ stacks = [] }) => {
+const TechStacks = ({ stacks = [], workspaces = [] }) => {
   return (
     <div className={style.tech_stacks}>
       <div className="container">
@@ -27,6 +28,12 @@ const TechStacks = ({ stacks = [] }) => {
               <div className={style.others_wrapper}>
                 {stacks.filter((item) => item.isMain !== true).map((item) => <StackItem key={item.name} name={item.name} />)}
               </div>
+          </div>
+          <div className={style.workspace_card}>
+            <div className={style.title}><span className={style.highlight}>지나온 길</span>을 소개합니다.</div>
+            <div className={style.item_wrapper}>
+              {workspaces.map((item) => <WorkspaceItem name={item.name} period={item.period} as={item.as} />)}
+            </div>
           </div>
         </div>
       </div>

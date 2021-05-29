@@ -35,11 +35,12 @@ const stacks = [
     name: 'UI DESIGN',
   }
 ]
+const workspaces = []
 
 
 const TechStacksContainer = (props) => {
   return (
-    <TechStacks stacks={stacks} />
+    <TechStacks stacks={stacks} workspaces={workspaces} />
   )
 }
 
