@@ -9,7 +9,7 @@ const stacks = [
   },
   {
     name: 'Next',
-    level: 50,
+    level: 65,
     isLearning: true,
     isMain: true
   },
@@ -35,12 +35,29 @@ const stacks = [
     name: 'UI DESIGN',
   }
 ]
-const workspaces = []
+const achievements = [
+  {
+    type: 'school',
+    title: '세명컴퓨터고등학교 졸업',
+    start: '2015-03-02',
+    end: '2018-02-07'
+  },
+  {
+    type: 'cert',
+    title: '정보기기운용기능사',
+    start: '2017-07-05'
+  },
+  {
+    type: 'cert',
+    title: '정보처리기능사',
+    start: '2016-09-28'
+  }
+]
 
 
 const TechStacksContainer = (props) => {
   return (
-    <TechStacks stacks={stacks} workspaces={workspaces} />
+    <TechStacks stacks={stacks} achievements={achievements} />
   )
 }
 

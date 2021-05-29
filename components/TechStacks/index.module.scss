@@ -77,7 +77,7 @@ $card_padding_y: 75px;
       justify-content: space-between;
       flex-direction: column;
       
-      padding: $card_padding_x $card_padding_y;
+      padding: $card_padding_y $card_padding_x;
       
       background-color: #ffffff;
 
@@ -100,12 +100,12 @@ $card_padding_y: 75px;
         margin-top: 50px;
       }
     }
-    .workspace_card {
+    .achievement_card {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
       
-      padding: $card_padding_x $card_padding_y;
+      padding: $card_padding_y $card_padding_x;
       
       background-color: $color_apple_blue;
 
@@ -122,7 +122,7 @@ $card_padding_y: 75px;
       }
 
       .item_wrapper {
-        
+        margin-top: 50px;
       }
     }
   }

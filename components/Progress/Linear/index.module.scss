@@ -30,19 +30,19 @@ $progress_border_radius: 10px;
                 position: absolute;
                 left: 0;
     
-                width: $progress_height;
+                width: 10px;
                 height: 100%;
     
-                background-color: rgba($color: #ffffff, $alpha: 0.3);
+                background-color: rgba($color: #ffffff, $alpha: 0.4);
 
                 border-radius: $progress_border_radius;
 
-                animation-name: leftLoop;
+                animation-name: left-loop;
                 animation-iteration-count: infinite;
                 animation-duration: 2s;
                 animation-timing-function: ease-in-out;
 
-                @keyframes leftLoop {
+                @keyframes left-loop {
                     from { left: 0; }
                     to { left: 100%; }
                 }

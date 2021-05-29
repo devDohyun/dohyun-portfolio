@@ -2,10 +2,10 @@ import ImageCard from '@/components/Cards/Image'
 import style from './index.module.scss'
 import StackItem from './Item'
 import StackMainItem from './Item/Main'
-import WorkspaceItem from './Workspace/Item'
+import AchievementItem from './Item/Achievement'
 
 
-const TechStacks = ({ stacks = [], workspaces = [] }) => {
+const TechStacks = ({ stacks = [], achievements = [] }) => {
   return (
     <div className={style.tech_stacks}>
       <div className="container">
@@ -21,7 +21,7 @@ const TechStacks = ({ stacks = [], workspaces = [] }) => {
             <div className={style.text_javascript}>JS</div>
           </div>
             <div className={style.stack_card}>
-              <div className={style.title}>제가 보유한 <span className={style.highlight}>기술</span>은 ...</div>
+              <div className={style.title}>제가 주로 다루고있는 <span className={style.highlight}>기술</span>은 ...</div>
               <div className={style.main_wrapper}>
                 {stacks.filter((item) => item.isMain === true).map((item) => <StackMainItem key={item.name} name={item.name} level={item.level} isLearning={item.isLearning} />)}
               </div>
@@ -29,10 +29,10 @@ const TechStacks = ({ stacks = [], workspaces = [] }) => {
                 {stacks.filter((item) => item.isMain !== true).map((item) => <StackItem key={item.name} name={item.name} />)}
               </div>
           </div>
-          <div className={style.workspace_card}>
-            <div className={style.title}><span className={style.highlight}>지나온 길</span>을 소개합니다.</div>
+          <div className={style.achievement_card}>
+            <div className={style.title}>보유중인 <span className={style.highlight}>자격증</span> 및 <span className={style.highlight}>최종 학력</span></div>
             <div className={style.item_wrapper}>
-              {workspaces.map((item) => <WorkspaceItem name={item.name} period={item.period} positoin={item.positoin} />)}
+              {achievements.map((item) => <AchievementItem key={item.title} {...item} />)}
             </div>
           </div>
         </div>
