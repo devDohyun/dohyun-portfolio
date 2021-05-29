@@ -1,5 +1,8 @@
+$progress_height: 5px;
+$progress_border_radius: 10px;
+
 .progress_linear {
-    height: 5px;
+    height: $progress_height;
     
     .wrapper {
         position: relative;
@@ -8,7 +11,7 @@
         
         background-color: $color_grey7;
 
-        border-radius: 10px;
+        border-radius: $progress_border_radius;
 
         overflow: hidden;
 
@@ -19,6 +22,31 @@
             height: 100%;
             
             background-color: $color_apple_blue;
+            border-radius: $progress_border_radius;
+
+            overflow: hidden;
+
+            .active {
+                position: absolute;
+                left: 0;
+    
+                width: $progress_height;
+                height: 100%;
+    
+                background-color: rgba($color: #ffffff, $alpha: 0.3);
+
+                border-radius: $progress_border_radius;
+
+                animation-name: leftLoop;
+                animation-iteration-count: infinite;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+
+                @keyframes leftLoop {
+                    from { left: 0; }
+                    to { left: 100%; }
+                }
+            }
         }
     }
 }

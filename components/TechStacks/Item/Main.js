@@ -25,7 +25,7 @@ const MainItem = ({ name, isLearning, level }) => {
                 <div className={style.name}>{name}</div>
                 <div className={style.desc}>{desc}</div>
                 <div className={style.level}>
-                    <ProgressLinear value={level} />
+                    <ProgressLinear value={level} isActivated={isLearning} />
                 </div>
             </div>
         </div>
