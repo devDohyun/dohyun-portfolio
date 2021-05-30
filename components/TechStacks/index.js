@@ -20,7 +20,7 @@ const TechStacks = ({ stacks = [], achievements = [] }) => {
             <div className={style.title}>Javascript를 활용하여 <span className={style.highlight}>간결하고 정확한 코딩</span>을 지향합니다.</div>
           </div>
             <div className={style.stack_card}>
-              <div className={style.title}>제가 주로 다루고있는 <span className={style.highlight}>기술</span>은 ...</div>
+              <div className={style.title}>제가 주로 다루고있는 <span className={style.highlight}>기술스택</span>은 ...</div>
               <div className={style.main_wrapper}>
                 {stacks.filter((item) => item.isMain === true).map((item) => <StackMainItem key={item.name} name={item.name} level={item.level} isLearning={item.isLearning} />)}
               </div>
