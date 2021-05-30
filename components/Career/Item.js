@@ -12,6 +12,7 @@ const CareerItem = ({ id, name, description, start, end, position, onButtonClick
     if (end) result += end
     else result += '현재'
     
+    result = result.replaceAll('-', '/')
     return result
   }, [start, end])
   const handleMoreButtonClick = useCallback((e) => {
