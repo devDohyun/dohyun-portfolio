@@ -33,7 +33,9 @@ $card_padding_y: 75px;
       }
     }
     .title_card {
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       
       padding: $card_padding_y $card_padding_x;
 
@@ -56,16 +58,11 @@ $card_padding_y: 75px;
         }
       }
       .text_javascript {
-        z-index: 0;
-        
-        position: absolute;
-
         display: block;
+
+        margin-bottom: 25px;
         
-        right: $card_padding_x / 3;
-        bottom: $card_padding_y / 3;
-        
-        font-size: 96px;
+        font-size: 200px;
         line-height: 1;
         letter-spacing: -5px;
 
@@ -141,6 +138,8 @@ $card_padding_y: 75px;
         }
       }
       .note_wrapper {
+        margin-top: 15px;
+        
         font-size: 12px;
         color: rgba($color: #ffffff, $alpha: 0.5);
       }
