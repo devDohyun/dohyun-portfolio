@@ -1,4 +1,8 @@
 .career_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
   padding: 15px;
 
   border-bottom: 1px solid $color_grey7;
@@ -12,5 +16,17 @@
     font-weight: 400;
 
     color: $color_grey5;
+  }
+
+  .button_more {
+    outline: unset;
+    border: none;
+    background-color: transparent;
+
+    font-size: 24px;
+    
+    color: $color_apple_green;
+
+    cursor: pointer;
   }
 }

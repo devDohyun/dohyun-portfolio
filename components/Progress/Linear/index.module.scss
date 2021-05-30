@@ -2,51 +2,51 @@ $progress_height: 5px;
 $progress_border_radius: 10px;
 
 .progress_linear {
-    height: $progress_height;
+  height: $progress_height;
+  
+  .wrapper {
+    position: relative;
     
-    .wrapper {
-        position: relative;
-        
+    height: 100%;
+    
+    background-color: $color_grey7;
+
+    border-radius: $progress_border_radius;
+
+    overflow: hidden;
+
+    .value {
+      position: absolute;
+      left: 0;
+      
+      height: 100%;
+      
+      background-color: $color_apple_blue;
+      border-radius: $progress_border_radius;
+
+      overflow: hidden;
+
+      .active {
+        position: absolute;
+        left: 0;
+  
+        width: 10px;
         height: 100%;
-        
-        background-color: $color_grey7;
+  
+        background-color: rgba($color: #ffffff, $alpha: 0.4);
 
         border-radius: $progress_border_radius;
 
-        overflow: hidden;
+        animation-name: left-loop;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
 
-        .value {
-            position: absolute;
-            left: 0;
-            
-            height: 100%;
-            
-            background-color: $color_apple_blue;
-            border-radius: $progress_border_radius;
-
-            overflow: hidden;
-
-            .active {
-                position: absolute;
-                left: 0;
-    
-                width: 10px;
-                height: 100%;
-    
-                background-color: rgba($color: #ffffff, $alpha: 0.4);
-
-                border-radius: $progress_border_radius;
-
-                animation-name: left-loop;
-                animation-iteration-count: infinite;
-                animation-duration: 2s;
-                animation-timing-function: ease-in-out;
-
-                @keyframes left-loop {
-                    from { left: 0; }
-                    to { left: 100%; }
-                }
-            }
+        @keyframes left-loop {
+          from { left: 0; }
+          to { left: 100%; }
         }
+      }
     }
+  }
 }

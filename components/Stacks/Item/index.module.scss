@@ -1,16 +1,16 @@
 .stack_item {
-    display: inline-block;
+  display: inline-block;
 
-    margin-top: 5px;
-    padding: 5px 7.5px;
-    
-    background-color: $color_grey7;
+  margin-top: 5px;
+  padding: 5px 7.5px;
+  
+  background-color: $color_grey7;
 
-    border-radius: 7.5px;
+  border-radius: 7.5px;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    &:not(:last-of-type) {
-        margin-right: 5px;
-    }
+  &:not(:last-of-type) {
+    margin-right: 5px;
+  }
 }
