@@ -2,7 +2,6 @@ import ImageCard from '@/components/Cards/Image'
 import style from './index.module.scss'
 import StackItem from './Item'
 import StackMainItem from './Item/Main'
-import AchievementItem from './Item/Achievement'
 
 
 const TechStacks = ({ stacks = [], achievements = [] }) => {
@@ -30,9 +29,12 @@ const TechStacks = ({ stacks = [], achievements = [] }) => {
               </div>
           </div>
           <div className={style.achievement_card}>
-            <div className={style.title}>보유중인 <span className={style.highlight}>자격증</span> 및 <span className={style.highlight}>최종 학력</span></div>
+            <div className={style.title}><span className={style.highlight}>소프트웨어 특성화 고등학교</span>를 <span className={style.highlight}>졸업</span>하였습니다.</div>
             <div className={style.item_wrapper}>
-              {achievements.map((item) => <AchievementItem key={item.title} {...item} />)}
+              어린 시절부터 컴퓨터와 관련된 직업을 가지고 싶었던 저는, 소프트웨어 특성화 고등학교인 <span className={style.highlight}>세명 컴퓨터고등학교</span>에 진학하여 <span className={style.highlight}>스마트 보안솔루션과</span>를 전공하였습니다.<sup className={style.note} title="2018년 2월 졸업">1</sup><br />
+            </div>
+            <div className={style.note_wrapper}>
+              <div className={style.item}>1. 2018년 2월 졸업</div>
             </div>
           </div>
         </div>

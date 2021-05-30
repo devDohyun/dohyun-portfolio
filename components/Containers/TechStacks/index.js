@@ -57,7 +57,7 @@ const achievements = [
 
 const TechStacksContainer = (props) => {
   return (
-    <TechStacks stacks={stacks} achievements={achievements} />
+    <TechStacks stacks={stacks} />
   )
 }
 
