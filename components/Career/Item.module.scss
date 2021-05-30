@@ -1,0 +1,16 @@
+.career_item {
+  padding: 15px;
+
+  border-bottom: 1px solid $color_grey7;
+
+  .name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .period {
+    font-size: 14px;
+    font-weight: 400;
+
+    color: $color_grey5;
+  }
+}

@@ -4,9 +4,9 @@ import StackItem from './Item'
 import StackMainItem from './Item/Main'
 
 
-const TechStacks = ({ stacks = [], achievements = [] }) => {
+const Stacks = ({ stacks = [] }) => {
   return (
-    <div className={style.tech_stacks}>
+    <div className={style.stacks}>
       <div className="container">
         <div className={style.cards_wrapper}>
           <div>
@@ -44,4 +44,4 @@ const TechStacks = ({ stacks = [], achievements = [] }) => {
 }
 
 
-export default TechStacks
+export default Stacks

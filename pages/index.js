@@ -1,6 +1,7 @@
 import LayoutDefault from '@/components/Layouts/Default'
 import IntroContainer from '@/components/Containers/IntroContainer'
-import TechStacks from '@/components/Containers/TechStacks'
+import StacksContainer from '@/components/Containers/StacksContainer'
+import CareerContainer from '@/components/Containers/CareerContainer'
 
 
 const Index = () => {
@@ -8,7 +9,8 @@ const Index = () => {
     <>
       <LayoutDefault>
         <IntroContainer />
-        <TechStacks />
+        <StacksContainer />
+        <CareerContainer />
       </LayoutDefault>
     </>
   )

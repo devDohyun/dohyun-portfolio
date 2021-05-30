@@ -1,0 +1,61 @@
+.career {
+  padding: $page_content_padding 0;
+
+  
+  .content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  
+    @media (max-width: $bp_sm) {
+      flex-direction: column;
+    }
+    
+    .text_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      max-width: 350px;
+      margin-right: 30px;
+
+      @media (max-width: $bp_sm) {
+        flex-basis: 100%;
+        max-width: unset;
+
+        margin-right: unset;
+        margin-bottom: 30px;
+      }
+      
+      .icon {
+        font-size: 48px;
+
+        color: $color_grey4;
+      }
+      .title {
+        font-size: 36px;
+        font-weight: bolder;
+
+        color: $color_apple_green;
+      }
+      .text {
+        margin-top: 50px;
+
+        word-break: keep-all;
+
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: 1.5;
+
+        color: $color_grey4;
+      }
+    }
+    .career_wrapper {
+      display: flex;
+      align-items: center;
+      
+      flex-grow: 1;
+    }
+  }
+}
