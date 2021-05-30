@@ -1,10 +1,11 @@
 import { useCallback, useMemo } from 'react'
 import Icon from '@mdi/react'
-import { mdiPlusCircleOutline } from '@mdi/js'
+import { mdiPlusCircleOutline, mdiMinusCircleOutline } from '@mdi/js'
+import cx from 'classnames'
 import style from './Item.module.scss'
 
 
-const CareerItem = ({ id, name, description, start, end, position, onButtonClick }) => {
+const CareerItem = ({ id, name, description, start, end, position, onButtonClick, active }) => {
   const careerText = useMemo(() => {
     let result = start
     result += ' ~ '
@@ -15,6 +16,15 @@ const CareerItem = ({ id, name, description, start, end, position, onButtonClick
     result = result.replace(/-/g, '/')
     return `${position}, ${result}`
   }, [start, end, position])
+  const iconPath = useMemo(() => {
+    return active ? mdiMinusCircleOutline : mdiPlusCircleOutline
+  }, [active])
+  const buttonRightClassName = useMemo(() => {
+    return cx(style.button_right, {
+      [style.button_green]: active !== true,
+      [style.button_red]: active === true
+    })
+  }, [active])
   const handleMoreButtonClick = useCallback((e) => {
     if (typeof onButtonClick !== 'function') return
 
@@ -27,12 +37,21 @@ const CareerItem = ({ id, name, description, start, end, position, onButtonClick
 
   return (
     <div className={style.career_item}>
-      <div>
-        <div className={style.name}>{name}</div>
-        <div className={style.career_text}>{careerText}</div>
-      </div>
-      <button className={style.button_more} type="button" onClick={handleMoreButtonClick}>
-        <Icon size="1em" path={mdiPlusCircleOutline} />
+      {
+        ((active !== true) && (
+          <div>
+            <div className={style.name}>{name}</div>
+            <div className={style.career_text}>{careerText}</div>
+          </div>
+        ))
+        || (
+          <div className={style.career_desc}>
+            {description}
+          </div>
+        )
+      }
+      <button className={buttonRightClassName} type="button" onClick={handleMoreButtonClick}>
+        <Icon size="1em" path={iconPath} />
       </button>
     </div>
   )

@@ -17,16 +17,27 @@
 
     color: $color_grey5;
   }
+  .career_desc {
+    font-size: 14px;
+  }
 
-  .button_more {
+  .button_right {
+    padding: unset;
+    margin-left: 25px;
+    
     outline: unset;
     border: none;
     background-color: transparent;
 
     font-size: 24px;
     
-    color: $color_apple_green;
-
     cursor: pointer;
+
+    &.button_green {
+      color: $color_apple_green;
+    }
+    &.button_red {
+      color: $color_apple_red;
+    }
   }
 }
