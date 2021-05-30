@@ -5,7 +5,7 @@ import style from './Item.module.scss'
 
 
 const CareerItem = ({ id, name, description, start, end, position, onButtonClick }) => {
-  const period = useMemo(() => {
+  const careerText = useMemo(() => {
     let result = start
     result += ' ~ '
 
@@ -13,8 +13,8 @@ const CareerItem = ({ id, name, description, start, end, position, onButtonClick
     else result += '현재'
     
     result = result.replace(/-/g, '/')
-    return result
-  }, [start, end])
+    return `${position}, ${result}`
+  }, [start, end, position])
   const handleMoreButtonClick = useCallback((e) => {
     if (typeof onButtonClick !== 'function') return
 
@@ -29,7 +29,7 @@ const CareerItem = ({ id, name, description, start, end, position, onButtonClick
     <div className={style.career_item}>
       <div>
         <div className={style.name}>{name}</div>
-        <div className={style.period}>{period}</div>
+        <div className={style.career_text}>{careerText}</div>
       </div>
       <button className={style.button_more} type="button" onClick={handleMoreButtonClick}>
         <Icon size="1em" path={mdiPlusCircleOutline} />
