@@ -1,8 +1,6 @@
-import classnames from 'classnames/bind'
+import cx from 'classnames'
 import style from './Image.module.scss'
 
-
-const cx = classnames.bind(style)
 
 const ImageCard = ({ src, className = [], ratio = 1 }) => {
   return (

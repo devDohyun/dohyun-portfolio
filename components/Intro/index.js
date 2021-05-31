@@ -1,9 +1,7 @@
 import React, { useMemo } from 'react'
-import classnames from 'classnames/bind'
+import cx from 'classnames'
 import style from './index.module.scss'
 
-
-const cx = classnames.bind(style)
 
 const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceholder, isIntro  = false }) => {
   const { isActivated, isExited, backgroundOpacity } = useMemo(() => {
@@ -20,7 +18,7 @@ const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceh
   
   return (
     <div className={style.intro}>
-      <div className={cx(style.content, { active: isActivated, exited: isExited })}>
+      <div className={cx(style.content, { [style.active]: isActivated, [style.exited]: isExited })}>
         <div className={style.content_text}>
           <div className={style.title}>3년차 Front-End 개발자 안도현</div>
           <div className={style.subtitle}>계속 내려서 더-보기</div>

@@ -1,10 +1,8 @@
 import { useMemo } from 'react'
 import MessageItem from './Item'
 import style from './List.module.scss'
-import classnames from 'classnames/bind'
+import cx from 'classnames'
 
-
-const cx = classnames.bind(style)
 
 const MessageList = ({ items = [] }) => {
   const itemsComputed = useMemo(() => (items.map((item, idx) => ({ ...item, direction: (idx % 2) ? 'right' : 'left' }))))

@@ -1,9 +1,7 @@
 import style from './Item.module.scss'
-import classnames from 'classnames/bind'
+import cx from 'classnames'
 import { useMemo } from 'react'
 
-
-const cx = classnames.bind(style)
 
 const MessageItem = ({ text, sender = {}, direction }) => {
   const messageItemClassName = useMemo(() => {
