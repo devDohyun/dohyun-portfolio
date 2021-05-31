@@ -37,19 +37,13 @@ const CareerItem = ({ id, name, description, start, end, position, onButtonClick
 
   return (
     <div className={style.career_item}>
-      {
-        ((active !== true) && (
-          <div>
-            <div className={style.name}>{name}</div>
-            <div className={style.career_text}>{careerText}</div>
-          </div>
-        ))
-        || (
-          <div className={style.career_desc}>
-            {description}
-          </div>
-        )
-      }
+      <div className={cx(style.text_box, { [style.hidden]: active })}>
+        <div className={style.name}>{name}</div>
+        <div className={style.career_text}>{careerText}</div>
+      </div>
+      <div className={cx(style.career_desc, { [style.active]: active })}>
+        {description}
+      </div>
       <button className={buttonRightClassName} type="button" onClick={handleMoreButtonClick}>
         <Icon size="1em" path={iconPath} />
       </button>

@@ -1,4 +1,6 @@
 .career_item {
+  position: relative;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,18 +9,41 @@
 
   border-bottom: 1px solid $color_grey7;
 
-  .name {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .career_text {
-    font-size: 14px;
-    font-weight: 400;
-
-    color: $color_grey5;
+  .text_box {
+    z-index: 1;
+    position: relative;
+    
+    &.hidden {
+      opacity: 0;
+    }
+    
+    .name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .career_text {
+      font-size: 14px;
+      font-weight: 400;
+  
+      color: $color_grey5;
+    }
   }
   .career_desc {
+    position: absolute;
+    left: 0;
+
+    width: calc(100% - 50px);
+
+    opacity: 0;
+    
     font-size: 14px;
+
+    &.active {
+      opacity: 1;
+      
+      transition-property: opacity;
+      transition-duration: 0.5s;
+    }
   }
 
   .button_right {
