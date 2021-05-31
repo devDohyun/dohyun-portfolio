@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 import classnames from 'classnames/bind'
 import style from './index.module.scss'
 
@@ -38,4 +38,4 @@ const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceh
 }
 
 
-export default Intro
+export default React.memo(Intro)
