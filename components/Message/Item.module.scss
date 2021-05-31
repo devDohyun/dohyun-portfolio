@@ -1,0 +1,19 @@
+.message_item {
+  .sender {
+    margin-bottom: 5px;
+    
+    color: $color_grey4;
+    font-size: 14px;
+  }
+  .text {
+    max-width: 400px;
+
+    padding: 20px;
+    
+    background-color: $color_apple_blue;
+
+    border-radius: 25px;
+    
+    color: #ffffff;
+  }
+}
