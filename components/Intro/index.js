@@ -7,16 +7,16 @@ const cx = classnames.bind(style)
 
 const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceholder, isIntro  = false }) => {
   const { isActivated, isExited, backgroundOpacity } = useMemo(() => {
-    if (isIntro !== true) return {}
-
-
-    return {
+    if (isIntro) return {
       isActivated: percentage < 1,
       isExited: percentage === 1,
       backgroundOpacity: 1 - percentage
     }
+
+    
+    return {}
   }, [percentage])
-  
+
   
   return (
     <div className={style.intro}>
