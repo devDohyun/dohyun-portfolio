@@ -1,16 +1,11 @@
-import { useMemo } from 'react'
 import MessageItem from './Item'
 import style from './List.module.scss'
 import cx from 'classnames'
 
-
 const MessageList = ({ items = [] }) => {
-  const itemsComputed = useMemo(() => (items.map((item, idx) => ({ ...item, direction: (idx % 2) ? 'right' : 'left' }))))
-  
-  
   return (
     <div className={style.message_list}>
-      {itemsComputed.map((item) => (
+      {items.map(item => (
         <div key={item.id} className={cx(style.item, { [style.left]: item.direction === 'left', [style.right]: item.direction === 'right' })}>
           <MessageItem {...item} />
         </div>
@@ -18,6 +13,5 @@ const MessageList = ({ items = [] }) => {
     </div>
   )
 }
-
 
 export default MessageList

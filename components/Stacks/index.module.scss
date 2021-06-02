@@ -11,10 +11,9 @@ $card_padding_y: 75px;
   line-height: 1.4;
 }
 
-
 .stacks {
   padding: $page_content_padding 0;
-  
+
   background-color: $color_grey9;
 
   .cards_wrapper {
@@ -36,23 +35,23 @@ $card_padding_y: 75px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      
+
       padding: $card_padding_y $card_padding_x;
 
       background-color: #191f28;
       border-radius: $card_border_radius;
 
       overflow: hidden;
-      
+
       .title {
         z-index: 1;
 
         position: relative;
-        
+
         @include card_title;
-        
+
         color: $color_grey5;
-        
+
         .highlight {
           color: #ffffff;
         }
@@ -61,7 +60,7 @@ $card_padding_y: 75px;
         display: block;
 
         margin-bottom: 25px;
-        
+
         font-size: 200px;
         line-height: 1;
         letter-spacing: -5px;
@@ -77,9 +76,9 @@ $card_padding_y: 75px;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      
+
       padding: $card_padding_y $card_padding_x;
-      
+
       background-color: #ffffff;
 
       border-radius: $card_border_radius;
@@ -105,13 +104,13 @@ $card_padding_y: 75px;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      
+
       padding: $card_padding_y $card_padding_x;
-      
+
       background-color: $color_apple_blue;
 
       border-radius: $card_border_radius;
-      
+
       .title {
         @include card_title;
 
@@ -139,7 +138,7 @@ $card_padding_y: 75px;
       }
       .note_wrapper {
         margin-top: 15px;
-        
+
         font-size: 12px;
         color: rgba($color: #ffffff, $alpha: 0.5);
       }

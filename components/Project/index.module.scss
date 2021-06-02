@@ -1,0 +1,10 @@
+.project {
+  padding: $page_content_padding 0;
+
+  background-color: #ffffff;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+}

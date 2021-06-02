@@ -1,23 +1,23 @@
-import Stacks from "@/components/Stacks"
+import Stacks from '@/components/Stacks'
 
 const stacks = [
   {
     name: 'Nuxt',
     level: 90,
     isLearning: false,
-    isMain: true
+    isMain: true,
   },
   {
     name: 'Next',
     level: 65,
     isLearning: true,
-    isMain: true
+    isMain: true,
   },
   {
     name: 'express',
     level: 40,
     isLearning: false,
-    isMain: true
+    isMain: true,
   },
   {
     name: 'ES6',
@@ -33,15 +33,11 @@ const stacks = [
   },
   {
     name: 'UI DESIGN',
-  }
+  },
 ]
 
-
 const StacksContainer = () => {
-  return (
-    <Stacks stacks={stacks} />
-  )
+  return <Stacks stacks={stacks} />
 }
-
 
 export default StacksContainer
