@@ -1,22 +1,36 @@
 .career_item {
   position: relative;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   padding: 15px 0;
 
   border-bottom: 1px solid $color_grey7;
 
+  transition-property: padding;
+  transition-duration: 0.3s;
+
+  &.active {
+    padding: 35px 0;
+
+    .text_box {
+      opacity: 0;
+    }
+
+    .career_desc {
+      opacity: 1;
+
+      transition-property: opacity;
+      transition-duration: 0.5s;
+    }
+  }
+
   .text_box {
     z-index: 1;
     position: relative;
-    
-    &.hidden {
-      opacity: 0;
-    }
-    
+
     .name {
       font-size: 16px;
       font-weight: bold;
@@ -24,38 +38,36 @@
     .career_text {
       font-size: 14px;
       font-weight: 400;
-  
+
       color: $color_grey4;
     }
   }
   .career_desc {
     position: absolute;
     left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
 
     width: calc(100% - 50px);
 
     opacity: 0;
-    
+
     font-size: 14px;
 
-    &.active {
-      opacity: 1;
-      
-      transition-property: opacity;
-      transition-duration: 0.5s;
-    }
+    word-break: keep-all;
   }
 
   .button_right {
     padding: unset;
     margin-left: 25px;
-    
+
     outline: unset;
     border: none;
     background-color: transparent;
 
     font-size: 24px;
-    
+
     cursor: pointer;
 
     &.button_green {
