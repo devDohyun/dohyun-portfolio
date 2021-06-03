@@ -1,13 +1,11 @@
 import ProjectList from './List'
 import style from './index.module.scss'
 
-const Project = ({ projects = [], onItemClick }) => {
+const Project = ({ projects = [] }) => {
   return (
     <div className={style.project}>
       <div className="container">
-        <div className={style.content}>
-          <ProjectList items={projects} onItemClick={onItemClick} />
-        </div>
+        <ProjectList items={projects} />
       </div>
     </div>
   )

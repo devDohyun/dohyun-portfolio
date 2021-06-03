@@ -1,15 +1,16 @@
-import ProjectItem from './Item'
+import Card from '@/components/Cards'
 import style from './List.module.scss'
 
-const ProjectList = ({ items = [], onItemClick }) => {
+const ProjectList = ({ items = [] }) => {
   return (
     <div className={style.project_list}>
       <div className={style.items_wrapper}>
         {items.map(item => (
-          <ProjectItem key={item.id} onClick={onItemClick} {...item} />
+          <div key={item.id} className={style.item}>
+            <Card>div</Card>
+          </div>
         ))}
       </div>
-      <div className={style.others_text}>이외 8개의 크고작은 프로젝트가 있습니다.</div>
     </div>
   )
 }

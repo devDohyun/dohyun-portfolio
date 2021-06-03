@@ -1,0 +1,19 @@
+$card_border_radius: 25px;
+$card_padding_x: 50px;
+$card_padding_y: 75px;
+
+.card {
+  width: 100%;
+  height: 100%;
+
+  padding: $card_padding_y $card_padding_x;
+
+  border-radius: $card_border_radius;
+
+  background-color: #ffffff;
+  box-shadow: 4px 12px 40px 6px rgba($color: #000000, $alpha: 0.09);
+
+  &.no_shadow {
+    box-shadow: unset;
+  }
+}

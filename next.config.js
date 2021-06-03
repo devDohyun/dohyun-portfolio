@@ -1,6 +1,6 @@
 module.exports = {
-    sassOptions: {
-        includePaths: ['./components'],
-        prependData: `@import "~@/styles/variables.scss";`
-    }
+  sassOptions: {
+    includePaths: ['./components'],
+    prependData: `@import "~@/styles/variables.scss";`,
+  },
 }
