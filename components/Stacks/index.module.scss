@@ -1,15 +1,4 @@
-$card_border_radius: 25px;
 $card_margin_y: 30px;
-$card_padding_x: 50px;
-$card_padding_y: 75px;
-
-@mixin card_title {
-  font-size: 32px;
-  font-weight: bolder;
-  word-break: keep-all;
-  letter-spacing: 0;
-  line-height: 1.4;
-}
 
 .stacks {
   padding: $page_content_padding 0;
@@ -36,19 +25,12 @@ $card_padding_y: 75px;
       flex-direction: column;
       justify-content: space-between;
 
-      padding: $card_padding_y $card_padding_x;
-
       background-color: #191f28;
-      border-radius: $card_border_radius;
-
-      overflow: hidden;
 
       .title {
         z-index: 1;
 
         position: relative;
-
-        @include card_title;
 
         color: $color_grey5;
 
@@ -77,15 +59,9 @@ $card_padding_y: 75px;
       justify-content: space-between;
       flex-direction: column;
 
-      padding: $card_padding_y $card_padding_x;
-
       background-color: #ffffff;
 
-      border-radius: $card_border_radius;
-
       .title {
-        @include card_title;
-
         color: $color_grey5;
 
         .highlight {
@@ -105,15 +81,9 @@ $card_padding_y: 75px;
       justify-content: space-between;
       flex-direction: column;
 
-      padding: $card_padding_y $card_padding_x;
-
       background-color: $color_apple_blue;
 
-      border-radius: $card_border_radius;
-
       .title {
-        @include card_title;
-
         color: rgba($color: #ffffff, $alpha: 0.6);
 
         .highlight {
