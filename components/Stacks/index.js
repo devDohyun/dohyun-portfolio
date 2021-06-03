@@ -1,4 +1,4 @@
-import ImageCard from '@/components/Card/Image'
+import Image from '@/components/Image'
 import Card from '@/components/Card'
 import CardTitle from '@/components/Card/Title'
 import StackItem from './Item'
@@ -13,7 +13,9 @@ const Stacks = ({ stacks = [] }) => {
       <div className="container">
         <div className={style.cards_wrapper}>
           <div className={style.card_item}>
-            <ImageCard src="https://storage.googleapis.com/clone-youtube-music/devdohyun-portfolio/imdohyun.jpg" ratio={1.2} />
+            <Card>
+              <Image src="https://storage.googleapis.com/clone-youtube-music/devdohyun-portfolio/imdohyun.jpg" ratio={1.2} />
+            </Card>
           </div>
           <div className={style.card_item}>
             <Card>
