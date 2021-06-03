@@ -2,20 +2,18 @@ import React, { useMemo } from 'react'
 import cx from 'classnames'
 import style from './index.module.scss'
 
-
-const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceholder, isIntro  = false }) => {
+const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceholder, isIntro = false }) => {
   const { isActivated, isExited, backgroundOpacity } = useMemo(() => {
-    if (isIntro) return {
-      isActivated: percentage < 1,
-      isExited: percentage === 1,
-      backgroundOpacity: 1 - percentage
-    }
+    if (isIntro)
+      return {
+        isActivated: percentage < 1,
+        isExited: percentage === 1,
+        backgroundOpacity: 1 - percentage,
+      }
 
-    
     return {}
   }, [percentage])
 
-  
   return (
     <div className={style.intro}>
       <div className={cx(style.content, { [style.active]: isActivated, [style.exited]: isExited })}>
@@ -34,6 +32,5 @@ const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceh
     </div>
   )
 }
-
 
 export default React.memo(Intro)

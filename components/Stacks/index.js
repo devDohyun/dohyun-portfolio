@@ -1,21 +1,23 @@
 import ImageCard from '@/components/Card/Image'
-import Card from '../Card'
-import CardTitle from '../Card/Title/Title'
-import style from './index.module.scss'
+import Card from '@/components/Card'
+import CardTitle from '@/components/Card/Title'
 import StackItem from './Item'
 import StackMainItem from './Item/Main'
+
+import style from './index.module.scss'
+import cx from 'classnames'
 
 const Stacks = ({ stacks = [] }) => {
   return (
     <div className={style.stacks}>
       <div className="container">
         <div className={style.cards_wrapper}>
-          <div>
+          <div className={style.card_item}>
             <ImageCard src="https://storage.googleapis.com/clone-youtube-music/devdohyun-portfolio/imdohyun.jpg" ratio={1.2} />
           </div>
-          <div>
+          <div className={style.card_item}>
             <Card>
-              <div className={style.title_card}>
+              <div className={cx(style.card_content, style.title_card)}>
                 <div className={style.text_javascript}>JS</div>
                 <CardTitle>
                   <div className={style.title}>
@@ -25,9 +27,9 @@ const Stacks = ({ stacks = [] }) => {
               </div>
             </Card>
           </div>
-          <div>
+          <div className={style.card_item}>
             <Card>
-              <div className={style.stack_card}>
+              <div className={cx(style.card_content, style.stack_card)}>
                 <CardTitle>
                   <div className={style.title}>
                     제가 주로 다루고있는 <span className={style.highlight}>기술스택</span>은 ...
@@ -50,9 +52,9 @@ const Stacks = ({ stacks = [] }) => {
               </div>
             </Card>
           </div>
-          <div>
+          <div className={style.card_item}>
             <Card>
-              <div className={style.achievement_card}>
+              <div className={cx(style.card_content, style.achievement_card)}>
                 <CardTitle>
                   <div className={style.title}>
                     <span className={style.highlight}>소프트웨어 특성화 고등학교</span>를 <span className={style.highlight}>졸업</span>하였습니다.

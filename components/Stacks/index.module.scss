@@ -12,105 +12,113 @@ $card_margin_y: 30px;
     justify-content: space-between;
     align-items: stretch;
 
-    & > * {
+    .card_item {
       flex-basis: calc(50% - #{$card_margin_y / 2});
       margin-bottom: $card_margin_y;
 
       @media (max-width: $bp_sm) {
         flex-basis: 100%;
       }
-    }
-    .title_card {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
 
-      background-color: #191f28;
+      .card_content {
+        width: 100%;
+        height: 100%;
 
-      .title {
-        z-index: 1;
+        padding: $card_padding_x $card_padding_y;
 
-        position: relative;
+        &.title_card {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
 
-        color: $color_grey5;
+          background-color: #191f28;
 
-        .highlight {
-          color: #ffffff;
+          .title {
+            z-index: 1;
+
+            position: relative;
+
+            color: $color_grey5;
+
+            .highlight {
+              color: #ffffff;
+            }
+          }
+          .text_javascript {
+            display: block;
+
+            margin-bottom: 25px;
+
+            font-size: 200px;
+            line-height: 1;
+            letter-spacing: -5px;
+
+            color: #f6df34;
+
+            @media (max-width: $bp_sm) {
+              font-size: 64px;
+            }
+          }
         }
-      }
-      .text_javascript {
-        display: block;
+        &.stack_card {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
 
-        margin-bottom: 25px;
+          background-color: #ffffff;
 
-        font-size: 200px;
-        line-height: 1;
-        letter-spacing: -5px;
+          .title {
+            color: $color_grey5;
 
-        color: #f6df34;
+            .highlight {
+              color: #000000;
+            }
+          }
 
-        @media (max-width: $bp_sm) {
-          font-size: 64px;
+          .main_wrapper {
+            margin-top: 50px;
+          }
+          .others_wrapper {
+            margin-top: 50px;
+          }
         }
-      }
-    }
-    .stack_card {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
+        &.achievement_card {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
 
-      background-color: #ffffff;
+          background-color: $color_apple_blue;
 
-      .title {
-        color: $color_grey5;
+          .title {
+            color: rgba($color: #ffffff, $alpha: 0.6);
 
-        .highlight {
-          color: #000000;
+            .highlight {
+              color: #ffffff;
+            }
+          }
+
+          .item_wrapper {
+            margin-top: 50px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            color: rgba($color: #ffffff, $alpha: 0.5);
+
+            .highlight {
+              color: #ffffff;
+            }
+            .note {
+              font-size: 0.5em;
+            }
+          }
+          .note_wrapper {
+            margin-top: 15px;
+
+            font-size: 12px;
+            color: rgba($color: #ffffff, $alpha: 0.5);
+          }
         }
-      }
-
-      .main_wrapper {
-        margin-top: 50px;
-      }
-      .others_wrapper {
-        margin-top: 50px;
-      }
-    }
-    .achievement_card {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-
-      background-color: $color_apple_blue;
-
-      .title {
-        color: rgba($color: #ffffff, $alpha: 0.6);
-
-        .highlight {
-          color: #ffffff;
-        }
-      }
-
-      .item_wrapper {
-        margin-top: 50px;
-
-        font-size: 20px;
-        font-weight: bold;
-
-        color: rgba($color: #ffffff, $alpha: 0.5);
-
-        .highlight {
-          color: #ffffff;
-        }
-        .note {
-          font-size: 0.5em;
-        }
-      }
-      .note_wrapper {
-        margin-top: 15px;
-
-        font-size: 12px;
-        color: rgba($color: #ffffff, $alpha: 0.5);
       }
     }
   }
