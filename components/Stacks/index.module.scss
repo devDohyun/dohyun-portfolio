@@ -26,6 +26,10 @@ $card_margin_y: 30px;
 
         padding: $card_padding_x $card_padding_y;
 
+        @media (max-width: $bp_sm) {
+          padding: ($card_padding_x * 0.7) ($card_padding_y * 0.7);
+        }
+
         &.title_card {
           display: flex;
           flex-direction: column;
@@ -104,6 +108,10 @@ $card_margin_y: 30px;
             font-weight: bold;
 
             color: rgba($color: #ffffff, $alpha: 0.5);
+
+            @media (max-width: $bp_sm) {
+              font-size: 18px;
+            }
 
             .highlight {
               color: #ffffff;

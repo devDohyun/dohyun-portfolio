@@ -3,12 +3,16 @@
 
   margin-top: 5px;
   padding: 5px 7.5px;
-  
+
   background-color: $color_grey7;
 
   border-radius: 7.5px;
 
   font-size: 14px;
+
+  @media (max-width: $bp_sm) {
+    font-size: 12px;
+  }
 
   &:not(:last-of-type) {
     margin-right: 5px;

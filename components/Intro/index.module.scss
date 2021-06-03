@@ -28,6 +28,8 @@
 
         color: $color_primary;
 
+        word-break: keep-all;
+
         @media (max-width: $bp_sm) {
           font-size: 24px;
         }
@@ -64,10 +66,20 @@
           font-size: 36px;
           font-weight: bold;
           color: #ffffff;
+
+          word-break: keep-all;
+
+          @media (max-width: $bp_sm) {
+            font-size: 24px;
+          }
         }
         .subtitle {
           font-size: 24px;
           color: $color_grey4;
+
+          @media (max-width: $bp_sm) {
+            font-size: 16px;
+          }
         }
       }
     }
