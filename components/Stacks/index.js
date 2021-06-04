@@ -21,33 +21,33 @@ const Stacks = ({ stacks = [] }) => {
             <Card>
               <div className={cx(style.card_content, style.title_card)}>
                 <div className={style.text_javascript}>JS</div>
-                <CardTitle>
-                  <div className={style.title}>
+                <div className={style.title}>
+                  <CardTitle>
                     Javascript를 활용하여 <span className={style.highlight}>간결하고 정확한 코딩</span>을 지향합니다.
-                  </div>
-                </CardTitle>
+                  </CardTitle>
+                </div>
               </div>
             </Card>
           </div>
           <div className={style.card_item}>
             <Card>
               <div className={cx(style.card_content, style.stack_card)}>
-                <CardTitle>
-                  <div className={style.title}>
+                <div className={style.title}>
+                  <CardTitle>
                     제가 주로 다루고있는 <span className={style.highlight}>기술스택</span>은 ...
-                  </div>
-                </CardTitle>
+                  </CardTitle>
+                </div>
                 <div className={style.main_wrapper}>
                   {stacks
-                    .filter(item => item.isMain === true)
-                    .map(item => (
+                    .filter((item) => item.isMain === true)
+                    .map((item) => (
                       <StackMainItem key={item.name} name={item.name} level={item.level} isLearning={item.isLearning} />
                     ))}
                 </div>
                 <div className={style.others_wrapper}>
                   {stacks
-                    .filter(item => item.isMain !== true)
-                    .map(item => (
+                    .filter((item) => item.isMain !== true)
+                    .map((item) => (
                       <StackItem key={item.name} name={item.name} />
                     ))}
                 </div>
@@ -57,11 +57,11 @@ const Stacks = ({ stacks = [] }) => {
           <div className={style.card_item}>
             <Card>
               <div className={cx(style.card_content, style.achievement_card)}>
-                <CardTitle>
-                  <div className={style.title}>
+                <div className={style.title}>
+                  <CardTitle>
                     <span className={style.highlight}>소프트웨어 특성화 고등학교</span>를 <span className={style.highlight}>졸업</span>하였습니다.
-                  </div>
-                </CardTitle>
+                  </CardTitle>
+                </div>
                 <div className={style.item_wrapper}>
                   어린 시절부터 컴퓨터와 관련된 직업을 가지고 싶었던 저는, 소프트웨어 특성화 고등학교인 <span className={style.highlight}>세명 컴퓨터고등학교</span>에 진학하여 <span className={style.highlight}>스마트 보안솔루션과</span>를 전공하였습니다.
                   <sup className={style.note} title="2018년 2월 졸업">

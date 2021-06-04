@@ -15,7 +15,89 @@
 
       margin-bottom: 30px;
 
+      @media (max-width: $bp_sm) {
+        flex-basis: 100%;
+      }
+
+      &.main {
+        flex-basis: 100%;
+      }
+
       .card_content {
+        width: 100%;
+        height: 100%;
+
+        padding: $card_padding_y $card_padding_x;
+
+        &.project_9 {
+          background-color: #114f78;
+          background-image: linear-gradient(to left, #114f78, #5080ad);
+
+          .title {
+            color: #ffffff;
+          }
+        }
+        &.project_8 {
+          .title {
+            -webkit-text-fill-color: rgba($color: #000000, $alpha: 0);
+
+            background-clip: text;
+            background-color: rgba($color: #000000, $alpha: 0);
+            background-image: linear-gradient(to left, #1c2c3f 50%, #5080ad);
+          }
+        }
+        &.project_7 {
+          background-color: #000000;
+
+          .title {
+            color: #ffffff;
+
+            .hightlight {
+              color: #ff0000;
+            }
+          }
+        }
+        &.project_6 {
+          .title {
+            -webkit-text-fill-color: rgba($color: #000000, $alpha: 0);
+
+            background-clip: text;
+            background-color: rgba($color: #000000, $alpha: 0);
+            background-image: linear-gradient(to left, #000000, #2547fc);
+          }
+        }
+        &.project_5 {
+          background-color: #3f3f94;
+
+          .title {
+            color: #fecc05;
+          }
+        }
+        &.project_4 {
+          background-color: #96e0bf;
+          background-image: radial-gradient(at 5% 5%, #96e0bf 0%, rgba(123, 207, 106, 0) 75%), radial-gradient(at 95% 5%, rgb(174, 193, 84) 0%, rgba(174, 193, 84, 0) 75%), radial-gradient(at 95% 95%, #3ba374 0%, rgba(104, 169, 187, 0) 75%), radial-gradient(at 5% 95%, rgb(95, 194, 138) 0%, rgba(95, 194, 138, 0) 75%);
+
+          .title {
+            color: #ffffff;
+          }
+        }
+        &.project_3 {
+          .title {
+            color: rgb(124, 213, 148);
+          }
+        }
+        &.project_2 {
+          .title {
+            color: #13a1ff;
+          }
+        }
+        &.project_1 {
+          background-image: linear-gradient(rgb(46, 50, 125), rgb(217, 96, 55));
+
+          .title {
+            color: #ffffff;
+          }
+        }
       }
     }
   }

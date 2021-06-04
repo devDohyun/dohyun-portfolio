@@ -28,6 +28,7 @@ const projects = [
     gitUrl: `https://github.com/devdohyun/clone-youtube-music`,
     stacks: ['Nuxt', 'SCSS', 'Google Cloud Platform'],
     belong: '개인 프로젝트',
+    main: true,
   },
   {
     id: 6,
