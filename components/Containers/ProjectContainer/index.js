@@ -87,7 +87,7 @@ const projects = [
 
 const ProjectContainer = () => {
   const activeId = useRef(null)
-  const handleItemClick = useCallback(id => {
+  const handleItemClick = useCallback((id) => {
     activeId.current = id
   })
 
