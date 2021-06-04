@@ -20,3 +20,8 @@ $page_content_padding: 200px;
 
 $card_padding_x: 50px;
 $card_padding_y: 75px;
+
+@media (max-width: $bp_sm) {
+  $card_padding_x: $card_padding_x * 0.75 !global;
+  $card_padding_y: $card_padding_y * 0.75 !global;
+}

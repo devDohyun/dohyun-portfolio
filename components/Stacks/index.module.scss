@@ -24,11 +24,7 @@ $card_margin_y: 30px;
         width: 100%;
         height: 100%;
 
-        padding: $card_padding_x $card_padding_y;
-
-        @media (max-width: $bp_sm) {
-          padding: ($card_padding_x * 0.7) ($card_padding_y * 0.7);
-        }
+        padding: $card_padding_y $card_padding_x;
 
         &.title_card {
           display: flex;

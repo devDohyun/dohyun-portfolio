@@ -1,5 +1,4 @@
 import Project from '@/components/Project'
-import { useCallback, useRef } from 'react'
 
 const projects = [
   {
@@ -86,12 +85,7 @@ const projects = [
 ]
 
 const ProjectContainer = () => {
-  const activeId = useRef(null)
-  const handleItemClick = useCallback((id) => {
-    activeId.current = id
-  })
-
-  return <Project projects={projects} onItemClick={handleItemClick} />
+  return <Project projects={projects} />
 }
 
 export default ProjectContainer
