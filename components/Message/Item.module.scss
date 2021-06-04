@@ -1,7 +1,7 @@
 .message_item {
   .sender {
-    margin-bottom: 5px;
-    
+    margin-bottom: 7.5px;
+
     color: $color_grey4;
     font-size: 14px;
   }
@@ -9,11 +9,16 @@
     max-width: 400px;
 
     padding: 10px 20px;
-    
+
     background-color: $color_apple_blue;
 
     border-radius: 25px;
-    
+
+    font-size: 18px;
+
+    line-height: 1.6;
+    word-break: keep-all;
+
     color: #ffffff;
   }
 }
