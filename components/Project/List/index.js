@@ -13,9 +13,9 @@ const ProjectList = ({ items = [], onClickActiveButton }) => {
           <div key={item.id} className={cx(style.item, { [style.main]: item.main })}>
             <Card showActiveButton onClickActiveButton={() => onClickActiveButton(item)} light={item.light} dark={item.dark}>
               <div className={cx(style.card_content, style[`project_${item.id}`])}>
-                <div className={style.title}>
-                  <CardTitle large>{item.title}</CardTitle>
-                </div>
+                <CardTitle large>
+                  <div className={style.title}>{item.title}</div>
+                </CardTitle>
               </div>
             </Card>
           </div>

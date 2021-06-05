@@ -42,6 +42,7 @@ $card_margin_y: 30px;
 
             .highlight {
               color: #ffffff;
+              word-break: keep-all;
             }
           }
           .text_javascript {
@@ -72,6 +73,7 @@ $card_margin_y: 30px;
 
             .highlight {
               color: #000000;
+              word-break: keep-all;
             }
           }
 
@@ -94,6 +96,7 @@ $card_margin_y: 30px;
 
             .highlight {
               color: #ffffff;
+              word-break: keep-all;
             }
           }
 
@@ -111,6 +114,7 @@ $card_margin_y: 30px;
 
             .highlight {
               color: #ffffff;
+              word-break: keep-all;
             }
             .note {
               font-size: 0.5em;
