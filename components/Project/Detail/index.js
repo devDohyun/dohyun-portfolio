@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import Icon from '@mdi/react'
-import { mdiCloseCircle } from '@mdi/js'
+import { mdiCloseCircle, mdiOpenInNew } from '@mdi/js'
 import style from './index.module.scss'
 import StackItem from '@/components/Stacks/Item'
 
@@ -32,6 +32,12 @@ const ProjectDetail = ({ onClose, title, content, start, end, url, stacks, belon
         <div className={style.desc}>
           <div>{belong}</div>
           <div>{dateString}</div>
+          {url && (
+            <a target="_blank" href={url} className={style.link}>
+              Link
+              <Icon path={mdiOpenInNew} size="1em" />
+            </a>
+          )}
         </div>
         <div className={style.content}>{content}</div>
         <div className={style.stacks_wrapper}>

@@ -18,6 +18,8 @@
     top: 10px;
 
     button {
+      padding: unset;
+
       background: none;
       border: none;
       outline: none;
@@ -42,7 +44,14 @@
 
     & > * {
       display: inline-block;
-      margin-right: 7.5px;
+
+      &:not(:last-child) {
+        &::after {
+          content: '·';
+          display: inline-block;
+          margin: 0 5px;
+        }
+      }
     }
   }
   .content {
