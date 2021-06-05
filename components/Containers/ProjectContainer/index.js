@@ -17,7 +17,7 @@ const projects = [
   },
   {
     id: 8,
-    title: 'Sloker Works',
+    title: 'SLOKER works',
     content: `전통주 데이터 소싱 및 정보공시 서비스입니다.\n풀스택 개발과 UI디자인을 담당하였습니다.\n\n짧은 기한 내 완수를 위해 Vuetify의 UI컴포넌트를 적극적으로 활용하여 개발시간을 단축할 수 있었습니다.`,
     start: '2021-01-30',
     end: '2021-03-30',
@@ -71,7 +71,7 @@ const projects = [
   },
   {
     id: 3,
-    title: '르완다 Instant Messenger',
+    title: 'Instant Messenger',
     content: `비앤비컴퍼니(주)에서 진행한 ERP 내 채팅 서비스입니다.\n\n프론트엔드 개발을 전담하였으며, 서버 개발자분과 WebRTC 및 Socket 통신 연동 작업을 진행하였습니다.\n메인 API 서버와 클라이언트가 통신하는 과정에서 인증토큰을 노출하지 않기 위해 Proxy서버가 필요하였었는데,\n간단한 express 서버를 통해 해결할 수 있었습니다.\n프론트엔드 개발 완수 후엔 응용프로그램 형태로의 요청이 와서, Electron을 통해 webview 앱을 제작하기도 하였습니다.`,
     start: '2019-02-01',
     end: '2019-04-30',
