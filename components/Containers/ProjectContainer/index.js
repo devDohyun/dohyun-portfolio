@@ -109,12 +109,15 @@ const ProjectContainer = () => {
   const selectedProject = useMemo(() => {
     return projects.find((item) => item.id === selectedId)
   }, [selectedId])
+  const handleClose = useCallback(() => {
+    setSelectedId(null)
+  }, [])
 
   return (
     <>
       <Project projects={projects} onClickActiveButton={handleClickActiveButton} />
-      <Modal active={selectedId !== null}>
-        <ProjectDetail onClose={() => setSelectedId(null)} {...selectedProject} />
+      <Modal active={selectedId !== null} onBackgroundClick={handleClose}>
+        <ProjectDetail onClose={handleClose} {...selectedProject} />
       </Modal>
     </>
   )
