@@ -38,6 +38,8 @@
         font-size: 24px;
         color: $color_grey4;
 
+        word-break: keep-all;
+
         @media (max-width: $bp_sm) {
           font-size: 16px;
         }
@@ -76,6 +78,8 @@
         .subtitle {
           font-size: 24px;
           color: $color_grey4;
+
+          word-break: keep-all;
 
           @media (max-width: $bp_sm) {
             font-size: 16px;
