@@ -4,7 +4,7 @@ import StacksContainer from '@/components/Containers/StacksContainer'
 import CareerContainer from '@/components/Containers/CareerContainer'
 import ReviewContainer from '@/components/Containers/ReviewContainer'
 import ProjectContainer from '@/components/Containers/ProjectContainer'
-
+import ProfileContainer from '@/components/Containers/ProfileContainer'
 
 const Index = () => {
   return (
@@ -15,10 +15,10 @@ const Index = () => {
         <CareerContainer />
         <ReviewContainer />
         <ProjectContainer />
+        <ProfileContainer />
       </LayoutDefault>
     </>
   )
 }
-
 
 export default Index
