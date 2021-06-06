@@ -19,8 +19,10 @@
     margin-top: 50px;
     text-align: center;
 
-    color: $color_grey5;
+    color: $color_grey4;
 
     font-weight: lighter;
+
+    word-break: keep-all;
   }
 }

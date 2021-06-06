@@ -29,6 +29,10 @@
 
         padding: $card_padding_y $card_padding_x;
 
+        .title {
+          word-break: keep-all;
+        }
+
         &.project_9 {
           background-color: #114f78;
           background-image: linear-gradient(to left, #114f78, #5080ad);
