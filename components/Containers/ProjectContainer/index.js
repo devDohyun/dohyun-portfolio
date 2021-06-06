@@ -72,7 +72,7 @@ const projects = [
   {
     id: 3,
     title: 'Instant Messenger',
-    content: `비앤비컴퍼니(주)에서 진행한 ERP 내 채팅 서비스입니다.\n\n프론트엔드 개발을 전담하였으며, 서버 개발자분과 WebRTC 및 Socket 통신 연동 작업을 진행하였습니다.\n메인 API 서버와 클라이언트가 통신하는 과정에서 인증토큰을 노출하지 않기 위해 Proxy서버가 필요하였었는데,\n간단한 express 서버를 통해 해결할 수 있었습니다.\n프론트엔드 개발 완수 후엔 응용프로그램 형태로의 요청이 와서, Electron을 통해 webview 앱을 제작하기도 하였습니다.`,
+    content: `비앤비컴퍼니(주)에서 진행한 ERP 내 채팅 서비스입니다.\n\n프론트엔드 개발을 전담하였으며, 서버 개발자분과 WebRTC 및 Socket 통신 연동 작업을 진행하였습니다.\n메인 API 서버와 클라이언트가 통신하는 과정에서 인증토큰을 노출하지 않기 위해 Proxy서버가 필요하였었는데,\n간단한 express 서버를 통해 해결할 수 있었습니다.\n 웹 프론트엔드 개발 완수 후엔 응용프로그램 형태로의 요청이 추가로 와서, electron을 통해 webview 앱을 제작하기도 하였습니다.`,
     start: '2019-02-01',
     end: '2019-04-30',
     stacks: ['Vue', 'CSS', 'electron', 'express'],
