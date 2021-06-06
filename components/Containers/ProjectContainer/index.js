@@ -7,7 +7,7 @@ const projects = [
   {
     id: 9,
     title: '바움인테리어',
-    content: `개인적으로 진행한 외주 프로젝트입니다. 디자인 시안에 맞도록 풀스택 개발을 진행하였습니다.\n\n처음엔 SSR을 위해 Nuxt와 express API 서버로 개발을 진행하였으나, 현재 이용중인 서버 상 node 앱 구동이 불가능하였습니다.\n이에대한 해결책으로 Nuxt에서 제공하는 nuxt generate를 활용하였으며, 덕분에 간단한 수정 후 이슈를 해결할 수 있었습니다.`,
+    content: `개인적으로 진행한 외주 프로젝트입니다. 디자인 시안에 맞도록 풀스택 개발을 진행하였습니다.\n\n처음엔 Nuxt와 express API 서버로 개발을 진행하였으나, 클라이언트께서 현재 이용중인 서버 호스팅 상품 상 node 앱 구동이 불가능하였습니다.\n이에 대한 해결책으로 Nuxt에서 제공하는 Static mode(nuxt generate)를 활용하였으며, 덕분에 간단한 수정 후 이슈를 해결할 수 있었습니다.`,
     start: '2021-04-15',
     end: '2021-05-15',
     url: `https://bauminterior.cafe24.com`,
