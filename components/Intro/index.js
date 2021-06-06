@@ -8,7 +8,7 @@ const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceh
       return {
         isActivated: percentage < 1,
         isExited: percentage === 1,
-        backgroundOpacity: 1 - percentage,
+        backgroundOpacity: 1 - percentage || 0,
       }
 
     return {}
