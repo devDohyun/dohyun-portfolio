@@ -3,8 +3,24 @@
 
   background-color: #ffffff;
 
+  .title {
+    margin-bottom: 100px;
+
+    font-size: 36px;
+    font-weight: bolder;
+  }
+
   .cards_wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  .more_text {
+    margin-top: 50px;
+    text-align: center;
+
+    color: $color_grey5;
+
+    font-weight: lighter;
   }
 }
