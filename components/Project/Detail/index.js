@@ -42,7 +42,7 @@ const ProjectDetail = ({ onClose, title, content, start, end, url, stacks, belon
         <div className={style.content}>{content}</div>
         <div className={style.stacks_wrapper}>
           {stacks.map((item) => (
-            <StackItem key={item.id} name={item} />
+            <StackItem key={`${item.id}-${item}`} name={item} />
           ))}
         </div>
       </div>
