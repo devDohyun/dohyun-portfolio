@@ -32,3 +32,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# custom deployment
+deploy.sh
+
+# pm2 ecosystem
+ecosystem.config.js
