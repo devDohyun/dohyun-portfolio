@@ -20,7 +20,7 @@ const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceh
     <div className={style.intro}>
       <div className={cx(style.content, { [style.active]: isActivated, [style.exited]: isExited })}>
         <div className={style.content_text} style={{ transform: `translateY(${contentTextY})` }}>
-          <div className={style.title}>3년차 Front-End 개발자 안도현</div>
+          <div className={style.title}>Front-End 개발자 안도현</div>
           <div className={style.subtitle}>계속 내려서 더-보기</div>
         </div>
         <div className={style.background} style={{ opacity: backgroundOpacity }}>
