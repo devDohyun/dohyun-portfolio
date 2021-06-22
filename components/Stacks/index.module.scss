@@ -106,6 +106,8 @@ $card_margin_y: 30px;
             font-size: 20px;
             font-weight: bold;
 
+            word-break: keep-all;
+
             color: rgba($color: #ffffff, $alpha: 0.5);
 
             @media (max-width: $bp_sm) {

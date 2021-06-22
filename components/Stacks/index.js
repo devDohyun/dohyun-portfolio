@@ -23,7 +23,7 @@ const Stacks = ({ stacks = [] }) => {
                 <div className={style.text_javascript}>JS</div>
                 <div className={style.title}>
                   <CardTitle>
-                    Javascript를 활용하여 <span className={style.highlight}>간결하고 정확한 코딩</span>을 지향합니다.
+                    <span className={style.highlight}>Javascript</span>를 활용하여 <span className={style.highlight}>빠르고 간결한 개발</span>을 지향합니다.
                   </CardTitle>
                 </div>
               </div>
@@ -63,7 +63,7 @@ const Stacks = ({ stacks = [] }) => {
                   </CardTitle>
                 </div>
                 <div className={style.item_wrapper}>
-                  어린 시절부터 컴퓨터와 관련된 직업을 가지고 싶었던 저는, 소프트웨어 특성화 고등학교인 <span className={style.highlight}>세명 컴퓨터고등학교</span>에 진학하여 <span className={style.highlight}>스마트 보안솔루션과</span>를 전공하였습니다.
+                  어린 시절부터 컴퓨터와 관련된 직업을 가지고 싶었던 저는, 소프트웨어 특성화 고등학교인 <span className={style.highlight}>세명컴퓨터고등학교</span>에 진학하여 <span className={style.highlight}>스마트 보안솔루션과</span>를 전공하였습니다.
                   <sup className={style.note} title="2018년 2월 졸업">
                     1
                   </sup>
