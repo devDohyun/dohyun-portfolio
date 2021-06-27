@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import cx from 'classnames'
 import style from './index.module.scss'
 
-const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceholder, isIntro = false }) => {
+const Intro = ({ backgroundHeight = '100vh', percentage = 0, isIntro = false }) => {
   const { isActivated, isExited, backgroundOpacity, contentTextY, backgroundTextScale } = useMemo(() => {
     if (isIntro)
       return {
@@ -30,7 +30,7 @@ const Intro = ({ backgroundHeight = '100vh', percentage = 0, refBackgroundPlaceh
           </div>
         </div>
       </div>
-      <div ref={refBackgroundPlaceholder} style={{ height: backgroundHeight }}></div>
+      <div style={{ height: backgroundHeight }}></div>
     </div>
   )
 }
