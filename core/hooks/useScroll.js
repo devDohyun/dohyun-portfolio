@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 
 const useScroll = () => {
   const [state, setState] = useState({
-    percentage: 0,
+    progress: null,
+    progressTotal: null,
   })
   const domRef = useRef()
 
@@ -11,14 +12,14 @@ const useScroll = () => {
 
     const dom = domRef.current
     const over = window.scrollY - dom.offsetTop
+    const target = dom.offsetTop + dom.offsetHeight
 
     if (over < 0) return
 
-    const percentage = over / (dom.offsetTop + dom.offsetHeight)
+    const progress = over / (target - window.innerHeight)
+    const progressTotal = over / target
 
-    console.log(percentage)
-
-    setState((state) => ({ ...state, percentage }))
+    setState((state) => ({ ...state, progress, progressTotal }))
   }
 
   useEffect(() => {
