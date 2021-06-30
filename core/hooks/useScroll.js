@@ -4,6 +4,7 @@ const useScroll = () => {
   const [state, setState] = useState({
     progress: null,
     progressTotal: null,
+    inLastView: false,
   })
   const domRef = useRef()
 
@@ -19,7 +20,7 @@ const useScroll = () => {
     const progress = over / (target - window.innerHeight)
     const progressTotal = over / target
 
-    setState((state) => ({ ...state, progress, progressTotal }))
+    setState((state) => ({ ...state, progress, progressTotal, inLastView: target - over <= window.innerHeight }))
   }
 
   useEffect(() => {
