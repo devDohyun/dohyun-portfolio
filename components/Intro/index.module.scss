@@ -29,6 +29,20 @@
       .highlight {
         color: #000000;
       }
+      .text_behind {
+        position: absolute;
+
+        color: white;
+
+        opacity: 0;
+
+        transition-property: opacity;
+        transition-duration: 0.5s;
+
+        &.active {
+          opacity: 1;
+        }
+      }
 
       .title {
         font-size: 84px;
