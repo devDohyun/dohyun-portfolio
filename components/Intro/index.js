@@ -1,4 +1,5 @@
 import cx from 'classnames'
+import AnimateWave from '../Animate/Wave'
 import style from './index.module.scss'
 
 const Intro = ({ progress = 0, sticky = false, scrollAmount }) => {
@@ -11,18 +12,22 @@ const Intro = ({ progress = 0, sticky = false, scrollAmount }) => {
     <div className={style.intro}>
       {sticky && scrollAmount && <div style={{ height: scrollAmount }}></div>}
       <div className={contentClassnames}>
+        {/* <div className={style.canvas_wrapper}>
+          <AnimateWave progress={progress} />
+        </div> */}
         <div className={style.text_wrapper}>
-          {progress <= 0.5 ? (
-            <>
-              <div className={style.title}>Front-End 개발자 안도현</div>
-              <div className={style.subtitle}>아래로 내려서 더-보기</div>
-            </>
-          ) : (
-            <>
-              <div className={style.title}>저의 작은 경험이 귀사에 도움이 되길 바랍니다.</div>
-              <div className={style.subtitle}>사용자에게 좋은 서비스를 만들기 위해 노력하겠습니다.</div>
-            </>
-          )}
+          <div className="container">
+            <div className={cx(style.title, style.animate)}>
+              <div>안녕하세요.</div>
+              <div>
+                <span className={style.highlight}>Web Front-End</span> 개발자
+              </div>
+              <div>
+                <span className={style.highlight}>안도현</span>입니다.
+              </div>
+            </div>
+            <div className={cx(style.subtitle, style.animate)}>아래로 내려서 더-보기</div>
+          </div>
         </div>
       </div>
     </div>

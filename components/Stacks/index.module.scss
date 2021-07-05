@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $card_margin_y: 30px;
 
 .stacks {
@@ -13,7 +15,7 @@ $card_margin_y: 30px;
     align-items: stretch;
 
     .card_item {
-      flex-basis: calc(50% - #{$card_margin_y / 2});
+      flex-basis: calc(50% - #{math.div($card_margin_y, 2)});
       margin-bottom: $card_margin_y;
 
       @media (max-width: $bp_sm) {

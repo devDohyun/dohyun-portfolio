@@ -1,9 +1,10 @@
+@use "sass:math";
+
 .intro {
   position: relative;
 
   .content {
     display: flex;
-    justify-content: center;
     align-items: center;
 
     width: 100%;
@@ -21,14 +22,78 @@
     }
 
     .text_wrapper {
+      flex-basis: 100%;
+
+      color: #555555;
+
+      .highlight {
+        color: #000000;
+      }
+
       .title {
-        font-size: 48px;
+        font-size: 84px;
         font-weight: bolder;
+
+        line-height: 1.4;
+
+        @media (max-width: $bp_md) {
+          font-size: 64px;
+        }
+        @media (max-width: $bp_sm) {
+          font-size: 48px;
+        }
+
+        &.animate {
+          $animation_duration: 1s;
+
+          & > * {
+            opacity: 0;
+
+            animation-fill-mode: forwards;
+            animation-name: fadeInFromBottom;
+            animation-duration: $animation_duration;
+
+            @for $i from 1 through 10 {
+              &:nth-child(#{$i}n) {
+                animation-delay: #{$i * math.div($animation_duration, 2) + 0.25s};
+              }
+            }
+          }
+        }
       }
       .subtitle {
+        margin-top: 75px;
+
         font-size: 24px;
         color: $color_grey4;
+
+        &.animate {
+          opacity: 0;
+
+          animation-fill-mode: forwards;
+          animation-name: fadeInFromBottom;
+          animation-duration: 1s;
+          animation-delay: 2.5s;
+        }
       }
     }
+    .canvas_wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
