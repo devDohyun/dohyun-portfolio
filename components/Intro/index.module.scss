@@ -32,9 +32,10 @@
       .text_behind {
         position: absolute;
 
-        color: white;
-
         opacity: 0;
+
+        color: white;
+        word-break: keep-all;
 
         transition-property: opacity;
         transition-duration: 0.5s;
