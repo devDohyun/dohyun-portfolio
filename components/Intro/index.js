@@ -20,11 +20,11 @@ const Intro = ({ progress = 0, sticky = false, scrollAmount }) => {
             <div className={cx(style.title, style.animate)}>
               <div>안녕하세요.</div>
               <div>
-                <span className={cx(style.text_behind, { [style.active]: progress > 0.9 })}>사용자를 생각하는</span>
+                <span className={cx(style.text_behind, { [style.active]: progress > 0.85 })}>사용자를 생각하는</span>
                 <span className={style.highlight}>Web Front-End&nbsp;</span> 개발자
               </div>
               <div>
-                <span className={cx(style.text_behind, { [style.active]: progress > 0.9 })}>안도현</span>
+                <span className={cx(style.text_behind, { [style.active]: progress > 0.85 })}>안도현</span>
                 <span className={cx(style.highlight)}>안도현</span>입니다.
               </div>
             </div>
