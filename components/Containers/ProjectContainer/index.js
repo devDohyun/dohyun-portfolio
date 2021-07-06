@@ -16,16 +16,6 @@ const projects = [
     dark: true,
   },
   {
-    id: 8,
-    title: 'SLOKER works',
-    content: `전통주 데이터 소싱 및 정보공시 서비스입니다.\n풀스택 개발과 UI디자인을 담당하였습니다.\n\n짧은 기한 내 완수를 위해 Vuetify의 UI컴포넌트를 적극적으로 활용하여 개발시간을 단축할 수 있었습니다.`,
-    start: '2021-01-30',
-    end: '2021-03-30',
-    url: `https://sloker.work`,
-    stacks: ['Nuxt', 'SCSS', 'express'],
-    belong: '(주)자이엔트',
-  },
-  {
     id: 7,
     title: 'Youtube Music 클론 코딩',
     content: `개인적으로 진행한 유튜브 뮤직 클론코딩 토이 프로젝트입니다.\n스타일 작성 능력을 복습하고자 외부 UI 컴포넌트 없이 직접 코드를 작성하여 개발하였습니다. 마지막 커밋으로부터 5개월이 지난 후 기존 소스코드를 보니 개선할 부분이 많은 것 같아 조만간 리팩토링을 진행해볼 예정입니다.`,
@@ -35,7 +25,6 @@ const projects = [
     gitUrl: `https://github.com/devdohyun/clone-youtube-music`,
     stacks: ['Nuxt', 'SCSS', 'Google Cloud Platform'],
     belong: '개인 프로젝트',
-    main: true,
     dark: true,
   },
   {

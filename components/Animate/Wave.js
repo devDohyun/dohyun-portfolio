@@ -21,8 +21,6 @@ const AnimateWave = ({ progress = 0 }) => {
     context.arc(canvas.width, canvas.height, radius, 0, 180)
     context.fill()
     context.closePath()
-
-    // console.log(radius, canvasHypotenuse, progress)
   }, [progress, canvasHypotenuse])
 
   useEffect(() => {
