@@ -35,7 +35,6 @@
         opacity: 0;
 
         color: white;
-        word-break: keep-all;
 
         transition-property: opacity;
         transition-duration: 0.5s;
@@ -81,6 +80,10 @@
 
         font-size: 24px;
         color: $color_grey4;
+
+        @media (max-width: $bp_sm) {
+          font-size: 16px;
+        }
 
         &.animate {
           opacity: 0;
