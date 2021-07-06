@@ -1,11 +1,16 @@
+import { useMemo } from 'react'
 import cx from 'classnames'
 import AnimateWave from '../Animate/Wave'
+
+import { easeInOutQuint } from '@/core/timing-functions'
+
 import style from './index.module.scss'
 
 const Intro = ({ progress = 0, sticky = false, scrollAmount }) => {
+  const figure = useMemo(() => easeInOutQuint(progress), [progress])
   const contentClassnames = cx(style.content, {
-    [style.sticky]: sticky && progress < 1,
-    [style.left]: progress >= 1,
+    [style.sticky]: sticky && figure < 1,
+    [style.left]: figure >= 1,
   })
 
   return (
@@ -13,18 +18,18 @@ const Intro = ({ progress = 0, sticky = false, scrollAmount }) => {
       {sticky && scrollAmount && <div style={{ height: scrollAmount }}></div>}
       <div className={contentClassnames}>
         <div className={style.canvas_wrapper}>
-          <AnimateWave progress={progress} />
+          <AnimateWave progress={figure} />
         </div>
         <div className={style.text_wrapper}>
           <div className="container">
             <div className={cx(style.title, style.animate)}>
               <div>안녕하세요.</div>
               <div>
-                <span className={cx(style.text_behind, { [style.active]: progress > 0.85 })}>사용자를 생각하는</span>
+                <span className={cx(style.text_behind, { [style.active]: figure > 0.85 })}>사용자를 생각하는</span>
                 <span className={style.highlight}>Web Front-End&nbsp;</span> 개발자
               </div>
               <div>
-                <span className={cx(style.text_behind, { [style.active]: progress > 0.85 })}>안도현</span>
+                <span className={cx(style.text_behind, { [style.active]: figure > 0.85 })}>안도현</span>
                 <span className={cx(style.highlight)}>안도현</span>입니다.
               </div>
             </div>
