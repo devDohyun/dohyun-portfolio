@@ -20,7 +20,7 @@ const Intro = ({ progress = 0, sticky = false, scrollAmount }) => {
         <div className={style.canvas_wrapper}>
           <AnimateWave progress={figure} />
         </div>
-        <div className={style.text_wrapper}>
+        <div className={cx(style.text_wrapper, { [style.active]: figure > 0.85 })}>
           <div className="container">
             <div className={cx(style.title, style.animate)}>
               <div>안녕하세요.</div>

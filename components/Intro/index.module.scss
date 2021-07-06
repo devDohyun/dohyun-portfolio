@@ -26,6 +26,13 @@
 
       color: #555555;
 
+      transition-property: color;
+      transition-duration: 0.5s;
+
+      &.active {
+        color: #aaaaaa;
+      }
+
       .highlight {
         color: #000000;
       }
