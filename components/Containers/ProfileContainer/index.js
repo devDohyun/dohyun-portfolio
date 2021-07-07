@@ -17,11 +17,13 @@ const linkItems = [
     id: 1,
     name: 'github',
     link: 'https://github.com/devdohyun',
+    linkShow: 'github.com/devdohyun',
   },
   {
     id: 2,
     name: 'blog',
     link: 'https://dev-dohyun.tistory.com',
+    linkShow: 'dev-dohyun.tistory.com',
   },
 ]
 
