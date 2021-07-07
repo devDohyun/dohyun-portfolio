@@ -10,6 +10,7 @@ const useScroll = () => {
 
   const listener = () => {
     if (!window) return console.warn('useScroll Hook: Window is not found.')
+    if (document.body.style.position === 'fixed') return
 
     const dom = domRef.current
     const over = window.scrollY - dom.offsetTop
