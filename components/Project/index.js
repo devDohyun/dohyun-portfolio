@@ -11,7 +11,7 @@ const Project = ({ projects = [], onClickActiveButton }) => {
           크고작은 프로젝트.
         </div>
         <ProjectList items={projects} onClickActiveButton={onClickActiveButton} />
-        <div className={style.more_text}>외 7개의 더 작은 프로젝트에도 참여하였습니다.</div>
+        <div className={style.more_text}>외 9개의 더 작은 프로젝트에도 참여하였습니다.</div>
       </div>
     </div>
   )
