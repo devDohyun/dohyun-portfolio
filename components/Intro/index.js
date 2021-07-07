@@ -2,12 +2,11 @@ import { useMemo } from 'react'
 import cx from 'classnames'
 import AnimateWave from '../Animate/Wave'
 
-import { easeInOutQuint } from '@/core/timing-functions'
-
 import style from './index.module.scss'
+import { easeOutQuint } from '@/core/timing-functions'
 
 const Intro = ({ progress = 0, sticky = false, scrollAmount }) => {
-  const figure = useMemo(() => easeInOutQuint(progress), [progress])
+  const figure = useMemo(() => easeOutQuint(progress), [progress])
   const contentClassnames = cx(style.content, {
     [style.sticky]: sticky && figure < 1,
     [style.left]: figure >= 1,
