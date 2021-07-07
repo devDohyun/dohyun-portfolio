@@ -14,7 +14,7 @@ const Stacks = ({ stacks = [] }) => {
         <div className={style.cards_wrapper}>
           <div className={style.card_item}>
             <Card>
-              <Image src="https://storage.googleapis.com/clone-youtube-music/devdohyun-portfolio/imdohyun.jpg" ratio={1.2} />
+              <Image src="https://kr.object.ncloudstorage.com/dev-dohyun/dohyun-portfolio/imdohyun.jpg" ratio={1.2} />
             </Card>
           </div>
           <div className={style.card_item}>
