@@ -6,10 +6,10 @@ import style from './Item.module.scss'
 
 const CareerItem = ({ id, name, description, start, end, position, onButtonClick, active }) => {
   const careerText = useMemo(() => {
-    let result = start
+    let result = start.slice(0, -3)
     result += ' ~ '
 
-    if (end) result += end
+    if (end) result += end.slice(0, -3)
     else result += '현재'
 
     result = result.replace(/-/g, '/')
@@ -25,7 +25,7 @@ const CareerItem = ({ id, name, description, start, end, position, onButtonClick
     })
   }, [active])
   const handleMoreButtonClick = useCallback(
-    e => {
+    (e) => {
       if (typeof onButtonClick !== 'function') return
 
       onButtonClick({
