@@ -5,6 +5,7 @@ const useCanvas = () => {
   const [state, setState] = useState({
     width: null,
     height: null,
+    resizeCount: 0,
   })
 
   const handleResize = useCallback(() => {
@@ -17,7 +18,7 @@ const useCanvas = () => {
     canvas.width = width
     canvas.height = height
 
-    setState((state) => ({ ...state, width, height }))
+    setState((state) => ({ ...state, width, height, resizeCount: state.resizeCount + 1 }))
   }, [])
 
   useEffect(() => {

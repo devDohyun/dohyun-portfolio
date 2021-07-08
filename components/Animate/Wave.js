@@ -3,7 +3,7 @@ import { useCanvas } from '@/core/hooks'
 import style from './Wave.module.scss'
 
 const AnimateWave = ({ progress = 0 }) => {
-  const [canvasRef, { width: canvasWidth, height: canvasHeight }] = useCanvas()
+  const [canvasRef, { width: canvasWidth, height: canvasHeight, resizeCount: canvasResizeCount }] = useCanvas()
   const canvasHypotenuse = useMemo(() => {
     return Math.sqrt(Math.pow(canvasWidth, 2) + Math.pow(canvasHeight, 2))
   }, [canvasWidth, canvasHeight])
@@ -28,6 +28,12 @@ const AnimateWave = ({ progress = 0 }) => {
 
     requestAnimationFrame(drawCanvas)
   }, [progress])
+  useEffect(() => {
+    if (canvasResizeCount < 1) return
+
+    console.log(canvasResizeCount)
+    drawCanvas()
+  }, [canvasResizeCount])
 
   return (
     <div className={style.wave}>
