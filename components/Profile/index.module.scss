@@ -6,10 +6,14 @@
   .title {
     margin-bottom: 150px;
 
-    font-size: 36px;
+    font-size: 48px;
     font-weight: bolder;
 
     word-break: keep-all;
+
+    @media (max-width: $bp_sm) {
+      font-size: 36px;
+    }
   }
 
   .business_card {

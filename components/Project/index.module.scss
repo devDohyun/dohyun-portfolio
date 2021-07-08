@@ -6,8 +6,12 @@
   .title {
     margin-bottom: 100px;
 
-    font-size: 36px;
+    font-size: 48px;
     font-weight: bolder;
+
+    @media (max-width: $bp_sm) {
+      font-size: 36px;
+    }
   }
 
   .cards_wrapper {

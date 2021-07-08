@@ -5,10 +5,14 @@
 
   .title {
     margin-bottom: 100px;
-    
-    font-size: 36px;
+
+    font-size: 48px;
     font-weight: bolder;
-    
+
     color: #ffffff;
+
+    @media (max-width: $bp_sm) {
+      font-size: 36px;
+    }
   }
 }
