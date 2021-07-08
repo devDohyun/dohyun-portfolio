@@ -31,7 +31,6 @@ const AnimateWave = ({ progress = 0 }) => {
   useEffect(() => {
     if (canvasResizeCount < 1) return
 
-    console.log(canvasResizeCount)
     drawCanvas()
   }, [canvasResizeCount])
 
