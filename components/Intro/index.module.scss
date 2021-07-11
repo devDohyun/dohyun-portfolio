@@ -56,6 +56,7 @@
         font-weight: bolder;
 
         line-height: 1.4;
+        word-break: keep-all;
 
         @media (max-width: $bp_md) {
           font-size: 64px;

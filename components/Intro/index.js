@@ -25,7 +25,7 @@ const Intro = ({ progress = 0, sticky = false, scrollAmount }) => {
               <div>안녕하세요.</div>
               <div>
                 <span className={cx(style.text_behind, { [style.active]: figure > 0.85 })}>UX에 진심을 담는</span>
-                <span className={style.highlight}>Web Front-End</span> 개발자
+                <span className={style.highlight}>Web Front-End&nbsp;</span> 개발자
               </div>
               <div>
                 <span className={cx(style.text_behind, { [style.active]: figure > 0.85 })}>안도현</span>
