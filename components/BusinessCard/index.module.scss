@@ -1,0 +1,29 @@
+.business_card {
+  padding: 35px 50px;
+
+  border-radius: 25px;
+  background-color: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+
+  .name {
+    font-size: 24px;
+    font-weight: bolder;
+  }
+  .role {
+    font-size: 14px;
+
+    color: $color_grey4;
+  }
+
+  .link_wrapper {
+    margin-top: 50px;
+
+    .item {
+      font-size: 12px;
+
+      .link_name {
+        font-weight: 500;
+      }
+    }
+  }
+}

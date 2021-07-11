@@ -1,11 +1,15 @@
 .profile {
-  padding: $page_content_padding 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  height: 100vh;
 
   background-color: $color_grey9;
 
-  .title {
-    margin-bottom: 150px;
+  overflow: hidden;
 
+  .title {
     font-size: 48px;
     font-weight: bolder;
 
@@ -16,35 +20,22 @@
     }
   }
 
-  .business_card {
+  .business_card_wrapper {
+    align-self: center;
+
+    width: 100%;
     max-width: 450px;
 
-    margin: 0 auto;
-    padding: 35px 50px;
+    &.animated {
+      opacity: 0;
+      transform: translateX(100%);
 
-    border-radius: 25px;
-    background-color: #ffffff;
-    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+      transition-property: transform opacity;
+      transition-duration: 0.75s;
 
-    .name {
-      font-size: 24px;
-      font-weight: bolder;
-    }
-    .role {
-      font-size: 14px;
-
-      color: $color_grey4;
-    }
-
-    .link_wrapper {
-      margin-top: 50px;
-
-      .item {
-        font-size: 12px;
-
-        .link_name {
-          font-weight: 500;
-        }
+      &.active {
+        opacity: 1;
+        transform: translateX(0);
       }
     }
   }
